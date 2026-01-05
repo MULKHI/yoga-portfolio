@@ -49,10 +49,8 @@ const experience = [
 ];
 
 const skills = [
-  'CorelDraw',
   'Pengoperasian Kamera',
   'Software Editing Video',
-  'Desain Grafis',
   'Dokumentasi',
   'Komunikasi',
 ];
@@ -105,7 +103,7 @@ const About = () => {
                     </div>
                     <div>
                       <p className="text-xs text-muted-foreground">Email</p>
-                      <p className="text-sm font-medium">dynamytz02@gmail.com</p>
+                      <p className="text-sm font-medium">yogaambarkusuma@gmail.com</p>
                     </div>
                   </a>
 
@@ -118,7 +116,7 @@ const About = () => {
                     </div>
                     <div>
                       <p className="text-xs text-muted-foreground">Phone</p>
-                      <p className="text-sm font-medium">+62 889-8025-4084</p>
+                      <p className="text-sm font-medium">+62 823-5160-9780</p>
                     </div>
                   </a>
 

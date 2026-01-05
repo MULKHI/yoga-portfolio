@@ -17,11 +17,11 @@ const Footer = () => {
             <div className="space-y-3">
               <a href="mailto:dynamytz02@gmail.com" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors text-sm">
                 <Mail size={16} />
-                dynamytz02@gmail.com
+                yogaambarkusuma@gmail.com
               </a>
               <a href="tel:+6288980254084" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors text-sm">
                 <Phone size={16} />
-                +62 889-8025-4084
+                +62 823-5160-9780
               </a>
               <p className="flex items-center gap-3 text-muted-foreground text-sm">
                 <MapPin size={16} />
