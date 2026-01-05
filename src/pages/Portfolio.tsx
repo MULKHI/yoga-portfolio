@@ -50,7 +50,7 @@ const portfolioItems = [
     icon: Camera,
     color: 'from-teal-500 to-emerald-500',
     link: 'https://www.instagram.com/p/DIJs0UGz6aD/',
-    image: 'src/assets/gambar1.heic',
+    image: '/image/gambar1.heic',
   },
   {
     id: 6,
@@ -60,7 +60,7 @@ const portfolioItems = [
     icon: Camera,
     color: 'from-violet-500 to-purple-500',
     link: 'https://www.instagram.com/p/C_sNOESSDzs/',
-    image: 'src/assets/get.jpeg',
+    image: '/image/get.jpeg',
   },
   {
     id: 7,
@@ -70,7 +70,7 @@ const portfolioItems = [
     icon: Camera,
     color: 'from-cyan-500 to-blue-500',
     link: 'https://www.instagram.com/p/C7vpMlVJux2/',
-    image: 'src/assets/How did we get here.webp',
+    image: '/image/How did we get here.webp',
   },
 ];
 
