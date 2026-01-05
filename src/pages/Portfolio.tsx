@@ -1,58 +1,73 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ExternalLink, Palette, Video, Camera } from 'lucide-react';
+import { ExternalLink, Video, Camera } from 'lucide-react';
 import Layout from '@/components/Layout';
 
-const categories = ['Semua', 'Desain Grafis', 'Video Editing', 'Dokumentasi'];
+const categories = ['Semua', 'Video Editing', 'Fotografi'];
 
 const portfolioItems = [
   {
     id: 1,
-    title: 'Social Media Content Design',
-    category: 'Desain Grafis',
-    description: 'Desain konten media sosial untuk berbagai brand',
-    icon: Palette,
-    color: 'from-pink-500 to-rose-500',
+    title: 'Cinematic Reel',
+    category: 'Video Editing',
+    description: 'Video editing dengan style cinematic dan transisi smooth',
+    icon: Video,
+    color: 'from-purple-500 to-indigo-500',
+    link: 'https://www.instagram.com/reel/DIi8dFDSVke/',
   },
   {
     id: 2,
-    title: 'Event Documentation',
-    category: 'Dokumentasi',
-    description: 'Dokumentasi kegiatan dan event kampus',
-    icon: Camera,
+    title: 'Creative Reel',
+    category: 'Video Editing',
+    description: 'Konten video kreatif dengan editing dinamis',
+    icon: Video,
     color: 'from-blue-500 to-cyan-500',
+    link: 'https://www.instagram.com/reel/DIO7n9SyF5m/',
   },
   {
     id: 3,
-    title: 'Promotional Video',
+    title: 'Short Film Edit',
     category: 'Video Editing',
-    description: 'Video promosi untuk FISIP UNS',
+    description: 'Editing video pendek dengan storytelling visual',
     icon: Video,
-    color: 'from-purple-500 to-indigo-500',
+    color: 'from-pink-500 to-rose-500',
+    link: 'https://www.instagram.com/reel/DRbYP0REdER/',
   },
   {
     id: 4,
-    title: 'Brand Identity Design',
-    category: 'Desain Grafis',
-    description: 'Pembuatan identitas visual brand',
-    icon: Palette,
+    title: 'Motion Graphics',
+    category: 'Video Editing',
+    description: 'Video dengan efek motion graphics modern',
+    icon: Video,
     color: 'from-orange-500 to-amber-500',
+    link: 'https://www.instagram.com/reel/DAY4ZaSBzu3/',
   },
   {
     id: 5,
-    title: 'Short Film Editing',
-    category: 'Video Editing',
-    description: 'Editing video pendek dan cinematic',
-    icon: Video,
-    color: 'from-green-500 to-emerald-500',
+    title: 'Portrait Photography',
+    category: 'Fotografi',
+    description: 'Fotografi portrait dengan digital imaging',
+    icon: Camera,
+    color: 'from-teal-500 to-emerald-500',
+    link: 'https://www.instagram.com/p/DIJs0UGz6aD/',
   },
   {
     id: 6,
-    title: 'Product Photography',
-    category: 'Dokumentasi',
-    description: 'Fotografi produk untuk e-commerce',
+    title: 'Creative Imaging',
+    category: 'Fotografi',
+    description: 'Digital imaging dan manipulasi foto kreatif',
     icon: Camera,
-    color: 'from-teal-500 to-cyan-500',
+    color: 'from-violet-500 to-purple-500',
+    link: 'https://www.instagram.com/p/C_sNOESSDzs/',
+  },
+  {
+    id: 7,
+    title: 'Photo Composition',
+    category: 'Fotografi',
+    description: 'Fotografi dengan komposisi dan editing profesional',
+    icon: Camera,
+    color: 'from-cyan-500 to-blue-500',
+    link: 'https://www.instagram.com/p/C7vpMlVJux2/',
   },
 ];
 
@@ -110,14 +125,17 @@ const Portfolio = () => {
           >
             <AnimatePresence mode="popLayout">
               {filteredItems.map((item, index) => (
-                <motion.div
+                <motion.a
                   key={item.id}
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   layout
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.3, delay: index * 0.05 }}
-                  className="group relative overflow-hidden rounded-xl bg-card border border-border hover:border-primary/50 transition-all hover-lift cursor-pointer"
+                  className="group relative overflow-hidden rounded-xl bg-card border border-border hover:border-primary/50 transition-all hover-lift cursor-pointer block"
                 >
                   {/* Gradient Background */}
                   <div className={`h-48 bg-gradient-to-br ${item.color} opacity-80 group-hover:opacity-100 transition-opacity flex items-center justify-center`}>
@@ -143,7 +161,7 @@ const Portfolio = () => {
                       <ExternalLink className="w-5 h-5 text-primary-foreground" />
                     </div>
                   </div>
-                </motion.div>
+                </motion.a>
               ))}
             </AnimatePresence>
           </motion.div>
