@@ -50,6 +50,7 @@ const portfolioItems = [
     icon: Camera,
     color: 'from-teal-500 to-emerald-500',
     link: 'https://www.instagram.com/p/DIJs0UGz6aD/',
+    image: '/placeholder.svg',
   },
   {
     id: 6,
@@ -59,6 +60,7 @@ const portfolioItems = [
     icon: Camera,
     color: 'from-violet-500 to-purple-500',
     link: 'https://www.instagram.com/p/C_sNOESSDzs/',
+    image: '/placeholder.svg',
   },
   {
     id: 7,
@@ -68,6 +70,7 @@ const portfolioItems = [
     icon: Camera,
     color: 'from-cyan-500 to-blue-500',
     link: 'https://www.instagram.com/p/C7vpMlVJux2/',
+    image: '/placeholder.svg',
   },
 ];
 
@@ -137,10 +140,20 @@ const Portfolio = () => {
                   transition={{ duration: 0.3, delay: index * 0.05 }}
                   className="group relative overflow-hidden rounded-xl bg-card border border-border hover:border-primary/50 transition-all hover-lift cursor-pointer block"
                 >
-                  {/* Gradient Background */}
-                  <div className={`h-48 bg-gradient-to-br ${item.color} opacity-80 group-hover:opacity-100 transition-opacity flex items-center justify-center`}>
-                    <item.icon className="w-16 h-16 text-white/80" />
-                  </div>
+                  {/* Image or Gradient Background */}
+                  {'image' in item && item.image ? (
+                    <div className="h-48 overflow-hidden">
+                      <img 
+                        src={item.image} 
+                        alt={item.title}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                    </div>
+                  ) : (
+                    <div className={`h-48 bg-gradient-to-br ${item.color} opacity-80 group-hover:opacity-100 transition-opacity flex items-center justify-center`}>
+                      <item.icon className="w-16 h-16 text-white/80" />
+                    </div>
+                  )}
                   
                   {/* Content */}
                   <div className="p-6">

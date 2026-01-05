@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Play, Camera, Video, Palette } from 'lucide-react';
+import { ArrowRight, Play, Camera, Video } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Layout from '@/components/Layout';
 import profilePhoto from '@/assets/profile-photo.jpeg';
@@ -115,22 +115,17 @@ const Index = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {[
-              {
-                icon: Palette,
-                title: 'Desain Grafis',
-                description: 'Menguasai CorelDraw dan software desain untuk membuat visual yang menarik',
-              },
               {
                 icon: Video,
                 title: 'Video Editing',
-                description: 'Pengalaman editing video untuk berbagai keperluan konten dan dokumentasi',
+                description: 'Pengalaman editing video untuk berbagai keperluan konten dan dokumentasi dengan style cinematic',
               },
               {
                 icon: Camera,
-                title: 'Videografi',
-                description: 'Kemampuan pengoperasian kamera dan teknik pengambilan gambar profesional',
+                title: 'Fotografi',
+                description: 'Kemampuan fotografi dan digital imaging untuk menghasilkan visual yang menarik',
               },
             ].map((skill, index) => (
               <motion.div
